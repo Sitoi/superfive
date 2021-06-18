@@ -30,6 +30,8 @@ class SuperFive(object):
         ███████║╚██████╔╝██║     ███████╗██║  ██║    ██║     ██║ ╚████╔╝ ███████╗
         ╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═══╝  ╚══════╝
         """)
+        if not os.path.exists(".cookies"):
+            self.get_cookies()
         with open(".cookies", "r") as f:
             self.cookies = f.read()
         self.headers = {
